@@ -32,7 +32,8 @@ public class EmployeeController {
         PageHelper.startPage(pn,4);
         PageHelper.orderBy("emp_id asc");
         List<Employee> emps = employeeService.getAll();
-        PageInfo pageInfo = new PageInfo(emps,3);
+        PageInfo pageInfo = new PageInfo(emps,2);
+        System.out.println(pageInfo);
         return Msg.success().add("pageInfo",pageInfo);
     }
 
